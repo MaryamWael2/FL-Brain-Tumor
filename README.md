@@ -1,2 +1,2 @@
-# FL-Brain-Tumor
-Federated Learning in Brain Tumor Segmentation
+# Federated Learning in Brain Tumor Segmentation
+This project ...
