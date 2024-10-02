@@ -1,10 +1,10 @@
 # Federated Learning in Brain Tumor Segmentation
 
-This repository contains an implementation of Federated Learning (FL) based on the FedML framework applied to brain tumor segmentation. The aim is to train a deep learning model collaboratively across multiple institutions without sharing sensitive patient data, ensuring the privacy of the patients.
+This repository contains an implementation of Federated Learning (FL) based on the FedML framework [1] applied to brain tumor segmentation. The aim is to train a deep learning model collaboratively across multiple institutions without sharing sensitive patient data, ensuring the privacy of the patients.
 
 ## Overview
 
-Federated Learning enables training models on decentralized data sources, meaning the data stays on local machines, and only model updates are shared. This is particularly useful in the healthcare sector, where data privacy is paramount. This project implements Fedderated Learning using the FedML framwork with a focus on **brain tumor segmentation** using neural networks.
+Federated Learning enables training models on decentralized data sources, meaning the data stays on local machines, and only model updates are shared. This is particularly useful in the healthcare sector, where data privacy is paramount. This project implements Fedderated Learning using the FedML framework [1] with a focus on **brain tumor segmentation** using neural networks.
 
 ## Key Features
 
@@ -27,7 +27,7 @@ FL-Brain-Tumor-Segmentation/
 │   └── gpu_mapping.yaml         # Configuration for GPU resource allocation
 │
 ├── data_loader.py               # Data loader utility for downloading and preprocessing datasets
-├── data_downloader.py           # Script for downloading medical imaging datasets
+├── data_downloader.py           # Script for downloading the images from sharepoint folder
 ├── tf_fedml_main.py             # Main script for federated learning workflow (training/aggregation)
 ├── tf_model.py                  # Definition of the TensorFlow model architecture (e.g., UNet)
 ├── tf_model_trainer.py          # Model trainer logic
@@ -38,7 +38,6 @@ FL-Brain-Tumor-Segmentation/
 │
 ├── build_mlops_pkg.sh           # Shell script for building MLOps packaging
 ├── README.md                    # Project documentation
-└── LICENSE                      # License for the project
 ```
 
 ## Setup
@@ -99,3 +98,7 @@ Once the federated learning process is complete, you can evaluate the model's pe
 - **Training Strategy**: Modify `tf_model_trainer.py` to change training strategies, optimizers, or loss functions.
 - **Aggregation Logic**: Adjust how client model updates are aggregated by editing `tf_model_aggregator.py`.
 
+## References
+For more information, please visit the Fedml documnetation. 
+[1] https://fedml.ai/home
+https://github.com/FedML-AI
